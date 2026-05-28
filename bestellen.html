@@ -1,0 +1,367 @@
+---
+layout: default
+title: Bestellformular
+seo:
+  title: Bestellformular
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+---
+
+<section class="capped-width padded" id="top">
+  <div class="center padded-b-1">
+    <h1>Bestellformular</h1>
+    <br>
+    <p>Bitte schicken Sie uns folgende CD, LP oder Musikkassette.</p>
+  </div>
+
+  <form name="bestellformular" method="POST" data-netlify="true" action="https://formspree.io/f/xaqkvorb"
+ class="bestellformular-wrapper">
+    <input type="hidden" name="form-name" value="bestellformular">
+
+    <div class="bestellformular-produkte">
+
+      <div class="bestellformular-header">
+        <div>Anzahl</div>
+        <div>Tonträger</div>
+        <div>Preis</div>
+      </div>
+
+      <div class="bestellformular-produkt">
+        <div class="produkt-anzahl">
+          <div class="anzahl-option">
+            <input type="number" name="schwyzer-naturjuuz-maess-cd-anzahl" min="0" placeholder="0">
+            <span>CD</span>
+          </div>
+        </div>
+
+        <div class="produkt-info">
+          <img src="/images/Schwyernaturjuuzmesse.jpg" alt="Schwyzer Naturjuuz-Mäss Cover">
+          <div>
+            <h4>Schwyzer Naturjuuz-Mäss</h4>
+          </div>
+        </div>
+
+        <div class="produkt-preis">
+          <p><strong>CD:</strong> Fr. 23.–</p>
+        </div>
+      </div>
+
+      <div class="bestellformular-produkt">
+        <div class="produkt-anzahl">
+          <div class="anzahl-option">
+            <input type="number" name="75-jahr-echo-vom-mythen-cd-anzahl" min="0" placeholder="0">
+            <span>CD</span>
+          </div>
+
+          <div class="anzahl-option">
+            <input type="number" name="75-jahr-echo-vom-mythen-mc-anzahl" min="0" placeholder="0">
+            <span>MC</span>
+          </div>
+        </div>
+
+        <div class="produkt-info">
+          <img src="/images/75_CD_Echo_vom_Mythen_klein.gif" alt="75 Jahr Echo vom Mythen Cover">
+          <div>
+            <h4>75 Jahr Echo vom Mythen</h4>
+          </div>
+        </div>
+
+        <div class="produkt-preis">
+          <p><strong>CD:</strong> Fr. 28.–</p>
+          <p><strong>MC:</strong> Fr. 22.–</p>
+        </div>
+      </div>
+
+      <div class="bestellformular-produkt">
+        <div class="produkt-anzahl">
+          <div class="anzahl-option">
+            <input type="number" name="schwyzer-vereine-musizieren-cd-anzahl" min="0" placeholder="0">
+            <span>CD</span>
+          </div>
+        </div>
+
+        <div class="produkt-info">
+          <img src="/images/CD_Schwyzer_Vereine.jpg" alt="Schwyzer Vereine musizieren Cover">
+          <div>
+            <h4>Schwyzer Vereine musizieren</h4>
+          </div>
+        </div>
+
+        <div class="produkt-preis">
+          <p><strong>CD:</strong> Fr. 25.–</p>
+        </div>
+      </div>
+
+      <div class="bestellformular-produkt">
+        <div class="produkt-anzahl">
+          <div class="anzahl-option">
+            <input type="number" name="schwyzerjueuzli-mc-anzahl" min="0" placeholder="0">
+            <span>MC</span>
+          </div>
+
+          <div class="anzahl-option">
+            <input type="number" name="schwyzerjueuzli-lp-anzahl" min="0" placeholder="0">
+            <span>LP</span>
+          </div>
+        </div>
+
+        <div class="produkt-info">
+          <img src="/images/Kassette.jpg" alt="Schwyzerjüüzli Cover">
+          <div>
+            <h4>Schwyzerjüüzli</h4>
+          </div>
+        </div>
+
+        <div class="produkt-preis">
+          <p><strong>LP:</strong> Fr. 10.–</p>
+          <p><strong>MC:</strong> Fr. 20.–</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bestellformular-daten">
+      <h4>Ihre Angaben</h4>
+
+      <div class="form-field">
+        <label for="anrede">Anrede</label>
+        <select id="anrede" name="anrede">
+          <option value="Familie">Familie</option>
+          <option value="Frau">Frau</option>
+          <option value="Herr">Herr</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="vorname">Vorname</label>
+        <input id="vorname" type="text" name="vorname">
+      </div>
+
+      <div class="form-field">
+        <label for="anschrift">Anschrift</label>
+        <input id="anschrift" type="text" name="anschrift">
+      </div>
+
+      <div class="form-field">
+        <label for="plz-ort">PLZ / Ort</label>
+        <input id="plz-ort" type="text" name="plz-ort">
+      </div>
+
+      <div class="form-field">
+        <label for="land">Land</label>
+        <select id="land" name="land">
+          <option value="Switzerland">Switzerland</option>
+          <option value="Germany">Germany</option>
+          <option value="Austria">Austria</option>
+          <option value="France">France</option>
+          <option value="Italy">Italy</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="telefon">Telefon</label>
+        <input id="telefon" type="tel" name="telefon">
+      </div>
+
+      <div class="form-field">
+        <label for="fax">Fax</label>
+        <input id="fax" type="text" name="fax">
+      </div>
+
+      <div class="form-field">
+        <label for="email">E-Mail</label>
+        <input id="email" type="email" name="email" required>
+      </div>
+
+      <div class="form-field form-field-textarea">
+        <label for="bemerkungen">Bemerkungen</label>
+        <textarea id="bemerkungen" name="bemerkungen" rows="5"></textarea>
+      </div>
+    </div>
+
+    <div class="form-actions center padded-t-2">
+      <button type="submit" class="button">Abschicken</button>
+      <button type="reset" class="button button-secondary">Zurücksetzen</button>
+    </div>
+  </form>
+</section>
+
+<style>
+    .bestellformular-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bestellformular-produkte {
+  margin-bottom: 4rem;
+}
+
+.bestellformular-header {
+  display: grid;
+  grid-template-columns: 180px 1fr 220px;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--dark);
+  margin-bottom: 1rem;
+}
+
+.bestellformular-produkt {
+  display: grid;
+  grid-template-columns: 180px 1fr 220px;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: var(--medium);
+  color: white;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.bestellformular-produkt:nth-of-type(even) {
+  background-color: var(--dark);
+}
+
+.produkt-anzahl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.anzahl-option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.anzahl-option input {
+  width: 4.2rem;
+  padding: 0.55rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.anzahl-option span {
+  color: white;
+  font-weight: bold;
+  min-width: 2.2rem;
+  display: inline-block;
+}
+
+.produkt-info {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.produkt-info img {
+  width: 90px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.produkt-info h2 {
+  color: white;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.produkt-preis p {
+  margin-bottom: 0.35rem;
+  color: white;
+}
+
+.bestellformular-daten {
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.bestellformular-daten h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  color: var(--dark);
+  font-weight: bold;
+  margin-bottom: 0.45rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 4px;
+  font: inherit;
+  background-color: white;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field-textarea {
+  margin-top: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--dark);
+  border: 2px solid var(--dark);
+}
+
+@media(max-width: 768px) {
+  .bestellformular-header {
+    display: none;
+  }
+
+  .bestellformular-produkt {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .produkt-info {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .produkt-info img {
+    width: 80px;
+  }
+
+  .bestellformular-daten {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+</style>

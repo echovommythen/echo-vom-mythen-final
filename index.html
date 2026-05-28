@@ -11,9 +11,101 @@ seo:
 ---
 
 <!------------------------ Image Banner  ------------------------>
-<section class="padded">
-    <h1> MAKE EVERYTHING EDITABLE FROM THE BEGINNING - USE JEKYLL LOOPS, LAYOUTS AND INCLUDES TO MAKE IT EDITABLE FOR CLIENTS</h1>
-    <h1> USE DATA-SRC AND CLASS OF LAZY ON ANY IMG AND JUST CLASS OF LAZY ON ANY BG-IMAGE</h1>
+
+<section class="bg-image tall-80 bg-header-index">
+  <div class="button-absolute-index">
+    <a href="/kontakt.html" class="button"> Jetzt Gönner werden </a>
+  </div>
 </section>
 
 
+<section class="capped-width-narrow">
+  <div class="padded center">
+    <h2> Veranstaltungen </h2>
+  </div>
+
+  {% assign veranstaltungen = site.data.veranstaltungen | sort: "datum" %}
+  {% assign counter = 0 %}
+
+  <div class="veranstaltungen-list">
+
+    {% for veranstaltung in veranstaltungen %}
+      {% assign veranstaltung_timestamp = veranstaltung.datum | date: "%s" %}
+      {% assign heute_timestamp = site.time | date: "%s" %}
+
+      {% if veranstaltung_timestamp >= heute_timestamp and counter < 3 %}
+        <div class="veranstaltung-card">
+          <div class="veranstaltung-datum">
+            {{ veranstaltung.datum_anzeige }}
+          </div>
+
+          <div class="veranstaltung-titel">
+            {{ veranstaltung.titel }}
+          </div>
+        </div>
+
+        {% assign counter = counter | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+  <div class="center padded padded-t-2">
+    <a href="/veranstaltungen.html" class="button"> Alle Veranstaltungen </a>
+  </div>
+</section>
+
+
+
+<section class="bg-medium text-white">
+  <div class="padded center capped-width-v-narrow editable">
+      <h3> 18. August 1928! </h3>
+      <br>
+      <p> An diesem Tag haben sieben wackere Mannen im ehemaligen Restaurant Alpenrösli in Schwyz die Klubgründung vollzogen. </p>
+      <p> Der Jodlerklub Echo vom Mythen kann also 2003 sein 75-Jahr-Jubiläum feiern. Er ist der zweitälteste Klub im Kanton Schwyz.  </p> 
+      <br>
+      <a href="/chronik.html" class="button-2"> weiterlesen </a>
+  </div>
+</section>
+<section class="bg-dark text-white">
+  <div class="padded center capped-width-v-narrow editable">
+    <h3 class="bigger"> 2028 </h3>
+    <h3> Juhu, wir feiern unser Hunderjähriges!  </h3>
+      <br>
+      <p> Hier ein Text dazu. </p>
+  </div>
+</section>
+
+
+<section>
+  <div class="padded center capped-width-v-narrow editable">
+    <h2> Der Naturjodel </h2>
+    <br>
+    <img src="/images/echo-vom-mythen-naturjodel.JPG" class="img-style-1">
+    <br><br>
+    <p>Naturjodel – Quo vadis?</p>
+    <p>Landauf, landab erfreuen sich Naturjodel-Konzerte grosser Beliebtheit und vermögen viel Volk anzuziehen. „Ur“ und „Natur“ werden neu entdeckt und sind voll im Trend.</p>
+    <p>Auch in der sogenannt alternativen Szene werden nach dem Amerika- und Ethno-Boom wieder vermehrt die eigenen Wurzeln gesucht (und entwickelt). Welche Gruppe ist näher dran?</p>
+    <br>
+    <a href="/der-naturjodel.html" class="button"> weiterlesen </a>
+  </div>
+</section>
+
+
+<section class="margin-b-2">
+  <div class="capped-width center padded" style="border-radius: 5rem; border: 2px solid var(--dark);">
+      <h2> Musik </h2>
+      <div class="grid-spaceAround-middle">
+        <div class="col-6 padded">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6B8k4G8fiRJS4BBg48ibmL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="col-6 padded">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6B8k4G8fiRJS4BBg48ibmL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      <a href="/musik.html" class="button"> mehr Musik </a>
+
+  </div>
+
+
+</section>

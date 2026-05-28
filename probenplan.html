@@ -1,0 +1,49 @@
+---
+layout: default
+title: Probenplan
+seo:
+  title: Probenplan
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+---
+
+<section class="capped-width padded">
+  <div class="center padded-b-1">
+    <h1>Probenplan</h1>
+  </div>
+
+  <div class="probenplan-info center">
+    <p>Probe jeweils am Donnerstag 20:00 Uhr in der Aula Schulhaus Herrengasse</p>
+  </div>
+
+  {% assign proben = site.data.probenplan | sort: "datum" %}
+
+  <div class="probenplan-list">
+
+    <div class="probenplan-header">
+      <div>Datum</div>
+      <div>Wer / Was</div>
+      <div>Wo</div>
+    </div>
+
+    {% for probe in proben %}
+      <div class="probenplan-card">
+        <div class="probenplan-datum">
+          {{ probe.datum_anzeige }}
+        </div>
+
+        <div class="probenplan-titel">
+          {{ probe.titel }}
+        </div>
+
+        <div class="probenplan-ort">
+          {{ probe.ort }}
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>

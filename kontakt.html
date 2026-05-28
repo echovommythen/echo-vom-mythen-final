@@ -1,0 +1,187 @@
+---
+layout: default
+title: Kontakt
+seo:
+  title: Kontakt
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+---
+
+<section class="capped-width padded" id="top">
+  <div class="center padded-b-2 margin-b-2">
+    <h1>Kontakt</h1>
+  </div>
+
+  <div class="kontakt-wrapper">
+
+    <div class="kontakt-card">
+      <h2>Präsident</h2>
+
+      <p>
+        <strong>Roger Betschart</strong><br>
+        Eggeli 1<br>
+        6443 Morschach
+      </p>
+
+      <p>
+        <strong>Telefon:</strong>
+        <a href="tel:+41796653199">079 665 31 99</a>
+      </p>
+
+      <p>
+        <strong>E-Mail:</strong>
+        <a href="mailto:praesi@echo-vom-mythen.ch">praesi@echo-vom-mythen.ch</a>
+      </p>
+    </div>
+
+
+    <div class="kontakt-card">
+      <h2>Dirigent</h2>
+
+      <p>
+        <strong>Roland Aschwanden</strong><br>
+        Kreuzgasse 4<br>
+        6422 Steinen
+      </p>
+
+      <p>
+        <strong>Telefon:</strong>
+        <a href="tel:+41418321056">041 832 10 56</a>
+      </p>
+
+      <p>
+        <strong>E-Mail:</strong>
+        <a href="mailto:dirigent@echo-vom-mythen.ch">dirigent@echo-vom-mythen.ch</a>
+      </p>
+    </div>
+
+
+    <div class="kontakt-card">
+      <h2>Sekretär</h2>
+
+      <p>
+        <strong>Maurice Andrey</strong><br>
+        Mangelegg 13<br>
+        6430 Schwyz
+      </p>
+
+      <p>
+        <strong>Telefon:</strong>
+        <a href="tel:+41418101063">041 810 10 63</a>
+      </p>
+
+      <p>
+        <strong>E-Mail:</strong>
+        <a href="mailto:sekr@echo-vom-mythen.ch">sekr@echo-vom-mythen.ch</a>
+      </p>
+    </div>
+
+
+    <div class="kontakt-card">
+      <h2>Kassier</h2>
+
+      <p>
+        <strong>Edwin Pfyl</strong><br>
+        Aufiberg Platzli 10<br>
+        6432 Rickenbach
+      </p>
+
+      <p>
+        <strong>Telefon:</strong>
+        <a href="tel:+41418100230">041 810 02 30</a>
+      </p>
+
+      <p>
+        <strong>E-Mail:</strong>
+        <a href="mailto:kasse@echo-vom-mythen.ch">kasse@echo-vom-mythen.ch</a>
+      </p>
+    </div>
+
+
+    <!-- <div class="kontakt-card">
+      <h2>Homepage</h2>
+
+      <p>
+        <strong>Gerold Suter</strong><br>
+        Grundstrasse 12<br>
+        6430 Schwyz
+      </p>
+
+      <p>
+        <strong>Telefon:</strong>
+        <a href="tel:+41418101115">041 810 11 15</a>
+      </p>
+
+      <p>
+        <strong>E-Mail:</strong>
+        <a href="mailto:webseite@echo-vom-mythen.ch">webseite@echo-vom-mythen.ch</a>
+      </p>
+    </div> -->
+
+  </div>
+</section>
+
+
+<style>
+    .kontakt-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.kontakt-card {
+  background-color: var(--medium);
+  color: white;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+
+.kontakt-card:nth-child(even) {
+  background-color: var(--dark);
+}
+
+.kontakt-card h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.kontakt-card p {
+  margin-bottom: 1.2rem;
+}
+
+.kontakt-card p:last-child {
+  margin-bottom: 0;
+}
+
+.kontakt-card a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.kontakt-card a:hover {
+  opacity: 0.8;
+}
+
+
+
+@media(max-width: 768px) {
+  .kontakt-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .kontakt-card {
+    padding: 1.5rem;
+  }
+
+  .kontakt-card:last-child {
+    max-width: 100%;
+  }
+}
+</style>

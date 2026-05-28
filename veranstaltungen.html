@@ -1,0 +1,54 @@
+---
+layout: default
+title: Veranstaltungen
+seo:
+  title: 
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+---
+
+<section class="capped-width-narrow padded">
+  <div class="center padded-b-1">
+    <h1>Veranstaltungen</h1>
+  </div>
+
+  {% assign veranstaltungen = site.data.veranstaltungen | sort: "datum" %}
+  {% assign aktuelles_jahr = "" %}
+
+  <div class="veranstaltungen-list">
+
+    {% for veranstaltung in veranstaltungen %}
+      {% assign jahr = veranstaltung.datum | date: "%Y" %}
+
+      {% if jahr != aktuelles_jahr %}
+        {% assign aktuelles_jahr = jahr %}
+
+        {% if forloop.first == false %}
+          <br><br>
+        {% endif %}
+
+        <h2 class="veranstaltungen-jahr center padded-b-1 padded-t-2">
+          {% if jahr == "2027" %}
+            Vorschau 2027
+          {% else %}
+            {{ jahr }}
+          {% endif %}
+        </h2>
+      {% endif %}
+
+      <div class="veranstaltung-card">
+        <div class="veranstaltung-datum">
+          {{ veranstaltung.datum_anzeige }}
+        </div>
+
+        <div class="veranstaltung-titel">
+          {{ veranstaltung.titel }}
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
