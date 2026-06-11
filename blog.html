@@ -1,0 +1,87 @@
+---
+layout: default
+title: Blog | Amy Baserga
+lang: de
+seo:
+  title: Blog | Amy Baserga
+  description: Willkommen in meinem Blog. Hier teile ich persönliche Geschichten, Biathlon-Updates, Wettkampf-Erlebnisse und Einblicke in mein Leben zwischen Spitzensport, Familie, Musik, Reisen und Vanlife.
+  social_image:
+  twitter_card:
+  keywords: Amy Baserga Blog, Biathlon Blog, Schweizer Biathletin, Spitzensport, Wettkampf, Training, Nationalteam, Einsiedeln, persönliche Geschichten, Vanlife
+  hide-from-google: false
+---
+
+
+<!------------------------ Split blog loop (part 1) ------------------------>
+
+
+<section>
+    <div class="capped-width padded padded-t-1 padded-b-2">
+         <div class="bg-paper-about grid-spaceAround-middle">
+            <div class="col-6_xs-12 padded">
+                 <div class="bg-img-index-1 relative">
+                    <img src="/images/amy-baserga-blog.jpeg" class="img-style-1">
+                    <h2 class="padded-1 editable"> Meine Geschichten </h2>
+                 </div>
+            </div>
+            <div class="col-6_xs-12 padded text-white editable">
+                <h1> Werde Teil meines Weges </h1>
+                <p> Bekomme Einblick in mein Alltag, Training, Wettkämpfe und Reisen. Erhalte als Erste/r alle Neuigkeiten sowie persönliche Einblicke von Amy. Über den aktuellen WhatsApp-Blog / die WhatsApp-Gruppe bleibst du für CHF 10.– immer auf dem Laufenden. Ebenso hast du die Gelegenheit, das eine oder andere Rennen live vom Streckenrand mitzuverfolgen. </p>
+                <a href="/kontakt.html" class="button"> jetzt beitreten </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="capped-width md-padded-2 padded-t-1 padded-b-0">
+
+    <div class="capped-width padded grid-center">
+
+
+        {% assign current_lang = page.lang | default: site.lang | default: 'de' %}
+        {% assign lang_posts = site.posts | where: "lang", current_lang %}
+
+        {% for post in lang_posts limit:24 %}
+        {% include post-loop-item-square.html %}
+        {% endfor %}
+
+
+    </div>
+
+</section>
+
+
+<!------------------------ CTA Banner  ------------------------>
+<!----
+<section class="bg-dark">
+    <section class="bg-dark text-light padded center capped-width"> 
+
+        <div class="capped-width-narrow">
+            <h2> Abonniere den Newsletter meiner Firma </h2>
+            <p> Mit unserer Theta-Welten Schwyz GmbH unterstützen wir Menschen von klein bis gross in jeglichen Lebenslagen auf emotionaler und spiritueller Ebene, immer verbunden mit Mutter Erde. </p>
+            <a href="#" class="button"> Abonnieren </a>
+        </div>
+
+    </section> 
+</section>
+--->
+
+
+<!------------------------ Split blog loop (part 2) ------------------------>
+<!----->
+<section class="capped-width md-padded-2 padded-b-05 padded-t-0">
+
+
+    {% assign post_count = site.posts | size %}
+    
+    {% if post_count > 15 %}
+        <div class="center padded-2">
+            <a class="button" href="/blog-archiv"> Archiv </a>
+        </div>
+       
+    {% endif %}
+
+</section>
+
