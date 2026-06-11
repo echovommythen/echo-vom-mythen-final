@@ -7,10 +7,12 @@ seo:
   author:
   favicon_image:
 social:
-  instagram_url:
+  instagram_url: https://www.instagram.com/echovommythen/
   facebook_url:
   pinterest_url:
   linkedin_url:
+  spotify_url:
+  applemusic_url:
 design:
   dark-text_color: '#343756'
   medium-text_color: '#8A293A'

@@ -24,7 +24,7 @@ html {
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 
-
+.red { color: red !important;}
 /* ---------- Negative Space Utility Classes  ------------------ */ 
 
 .capped-width-wide      { max-width: 1600px; margin: auto; }
