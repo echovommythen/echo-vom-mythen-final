@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<section class="center relative capped-width-narrow padded padded-b-0">
+<section class="center relative capped-width-v-narrow padded padded-b-0">
     <h1 class="blog-title-2"> {{ page.title }} </h1>  
     <p class="post-info"> by {{ page.author }} | {{ page.date | date_to_string }} </p>
 </section>
 
-<section class="capped-width blog-content">
+<section class="capped-width-v-narrow blog-content">
         <div class="padded">
             {{content}}
         </div>
@@ -15,14 +15,14 @@ layout: default
 
 <section>
     <div class="padded padded-t-2 center">
-        <a href="/anfrage.html" class="button"> jetzt buchen </a>
+        <a href="/aktuelles.html" class="button"> zurück </a>
     </div>
 </section>
 
-<section class="capped-width-narrow">
+<!-- <section class="capped-width-v-narrow">
     <div class="padded padded-t-0 center">
         <p> Schau dir auch unsere weiteren Blog Posts an: </p>
-        <div class="capped-width grid">
+        <div class="capped-width-v-narrow grid">
 
                 {% assign current_lang = page.lang | default: site.lang | default: 'de' %}
                 {% assign lang_posts = site.posts | where: "lang", current_lang %}
@@ -41,7 +41,6 @@ layout: default
                     </div>
                     <div class="col-9-middle padded-1">
                         <h4 class="margin-t-05 margin-b-05 subtle-heading-xs blog-h4">{{ post.title }}</h4>
-                        <!-- <p class="hide-xs">{{ post.description }}</p> -->
                     </div>
                     </div>
                 </a>
@@ -50,7 +49,7 @@ layout: default
     
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- <section class="bg-medium center text-white padded-2">
     {% include social-share.html %}

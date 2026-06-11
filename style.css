@@ -318,14 +318,25 @@ a {
     color: inherit;
 }
 
-
+.blog-content img {
+  min-width: 100%;
+}
 
 p a {
     text-decoration: none;
     border-bottom: 1px solid;
 }
 
+blockquote {
+  margin-left: 2rem;
+    border-left: 1px solid var(--dark);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
+blockquote p {
+  margin-left: 1rem;
+}
 
 .button { 
     display: inline-block;
