@@ -14,7 +14,7 @@ seo:
   keywords:
   hide-from-google: false
 ---
-## 97\. GV Jodlerklub Echo vom Mythen Schwyz
+
 
 ![](/images/aktuelles/gv-97-bild-gross.jpg)
 
