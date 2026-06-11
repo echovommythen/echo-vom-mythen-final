@@ -5,7 +5,7 @@ description:
 author:
 featured: false
 categories: []
-featured_image:
+featured_image: /images/aktuelles/gv-bericht-bote-printscreen.jpg
 seo:
   title: 98. GV des Jodlerklub Echo vom Mythen, Schwyz
   description:
@@ -16,7 +16,7 @@ seo:
 ---
 &nbsp;
 
-![](/images/aktuelles/GV-Bericht-Bote-der-Urschweiz_2026-01-09_Seite_8)
+![](/images/aktuelles/GV-Bericht-Bote-der-Urschweiz_2026-01-09_Seite_8.pdf)
 
 Traditionell am Vortag des Dreikönig findet unsere GV statt. Pünktlich eröffnete der unser Präsident die 98.GV. Es haben erfreulicherweise neben den aktuellen Aktivmitgliedern auch einige Ehemalige an der Versammlung teilgenommen.
 
