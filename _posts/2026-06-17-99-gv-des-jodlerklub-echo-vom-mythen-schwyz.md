@@ -14,7 +14,7 @@ seo:
   keywords:
   hide-from-google: false
 ---
-![]()
+![](/uploads/pajuramacopyright-97.jpeg)
 
 Traditionell am Vortag des Dreikönig findet unsere GV statt. Pünktlich eröffnete der unser Präsident die 98.GV. Es haben erfreulicherweise neben den aktuellen Aktivmitgliedern auch einige Ehemalige an der Versammlung teilgenommen.
 
