@@ -8,6 +8,105 @@ seo:
   twitter_card:
   keywords:
   hide-from-google: false
+
+tontraeger:
+  - titel: Schwyzer Naturjuuz-Mäss
+    bild: /images/Schwyernaturjuuzmesse.jpg
+    alt: Schwyzer Naturjuuz-Mäss CD Cover
+    text: 'Bei den Vorbereitungen zur Uraufführung der Schwyzer Naturjuuz-Mäss wurde eine Probeaufnahme der ganzen Messe durchgeführt. Sie ist nun auf CD erhältlich.'
+    kostproben:
+      - text: Zum Beginn
+        url: /mp3/ZumBeginn.mp3
+      - text: Credo
+        url: /mp3/Credo.mp3
+    modal: modal-messe
+    bestellen: /bestellen.html
+
+  - titel: Naturjüüze
+    bild: /images/75_CD_Echo_vom_Mythen_klein.gif
+    alt: CD Schwyzer Vereine Cover
+    text: 'Mit dieser selber produzierten CD und Musikkassette möchten wir Ihnen vor allem die Eigenarten unserer Naturjüüze dokumentieren.'
+    kostproben:
+      - text: d’Gibeler
+        url: /mp3/dr_GibelerInternet.mp3
+      - text: Die alte Schwyzer
+        url: /mp3/Die_alte_Schwyzer_Internet.mp3
+    modal: modal-schwyzer-vereine
+    bestellen: /bestellen.html
+
+  - titel: 75 Jahre Echo vom Mythen
+    bild: /images/CD_Schwyzer_Vereine.jpg
+    alt: 75 Jahre Echo vom Mythen CD Cover
+    text: 'Diese CD wurde im Rahmen des Kulturengagement der Schwyzer Kantonalbank produziert.'
+    kostproben:
+      - text: E Jodler
+        url: /mp3/E_Jodler_1Strophe_Internet.mp3
+    modal: modal-75-jahr
+    bestellen: /bestellen.html
+
+  - titel: 60 Jahre Jodlerklub Echo vom Mythen
+    bild: /images/Kassette.jpg
+    alt: Kassette Echo vom Mythen Cover
+    text: 'Diese Kassette und Langspielplatten wurde 1988 anlässlich des 60. jährigen Bestehens des Klubs aufgenommen.'
+    kostproben:
+      - text: "D'r alt Schwyzer"
+        url: /mp3/Dr_alt_Schwyzer.mp3
+      - text: "D's Paulis"
+        url: /mp3/ZPaulis.mp3
+    modal: modal-kassette
+    bestellen: /bestellen.html
+
+modals:
+  - id: modal-messe
+    kommentar: Popup Inhaltsverzeichnis Schwyzer Naturjuuz-Mäss
+    bild: /images/InhaltMesse.jpg
+    alt: Inhaltsverzeichnis Schwyzer Naturjuuz-Mäss
+
+  - id: modal-schwyzer-vereine
+    kommentar: Popup Inhaltsverzeichnis CD Schwyzer Vereine
+    bild: /images/CD_Schwyzer_Vereine_Inhalt.jpg
+    alt: Inhaltsverzeichnis CD Schwyzer Vereine
+
+  - id: modal-75-jahr
+    kommentar: Popup Inhaltsverzeichnis 75 Jahr CD
+    bild: /images/CD-Inhalt_75_Jahr.gif
+    alt: Inhaltsverzeichnis 75 Jahre Echo vom Mythen
+
+  - id: modal-kassette
+    kommentar: Popup Inhaltsverzeichnis Kassette
+    bild: /images/Inhalt_kassette.jpg
+    alt: Inhaltsverzeichnis Kassette
+
+vergriffene_tontraeger:
+  - titel: Schwyz
+    label: Tell Records
+    info: Produziert 1977 mit folgenden Titeln
+    titel_liste:
+      - titel: Am Röbi sine
+        komponist: trad.
+        dirigent: Albert Truttmann
+      - titel: Fluehöfler
+        komponist: trad.
+        dirigent: Albert Truttmann
+
+  - titel: Am Eidg. Jodlerfäscht z'Schwyz
+    label: Helvetia / Phonag
+    info: Produziert 1978 mit folgenden Titeln
+    titel_liste:
+      - titel: Dä Chaltbächler
+        komponist: trad.
+        dirigent: Albert Truttmann
+
+  - titel: Volkstümliches Schwyz
+    label: Tell Records
+    info: Produziert 1983 mit folgenden Titeln
+    titel_liste:
+      - titel: Schwyzer-Jutz
+        komponist: trad.
+        dirigent: Albert Truttmann
+      - titel: Nägälibärgler
+        komponist: trad.
+        dirigent: Albert Truttmann
 ---
 
 <section class="capped-width padded" id="top">
@@ -17,97 +116,39 @@ seo:
 
   <div class="tontraeger-wrapper">
 
-    <div class="tontraeger-card">
-      <div class="tontraeger-image">
-        <img src="/images/Schwyernaturjuuzmesse.jpg" alt="Schwyzer Naturjuuz-Mäss CD Cover">
-      </div>
-
-      <div class="tontraeger-content">
-        <h2>Schwyzer Naturjuuz-Mäss</h2>
-
-        <p>Bei den Vorbereitungen zur Uraufführung der Schwyzer Naturjuuz-Mäss wurde eine Probeaufnahme der ganzen Messe durchgeführt. Sie ist nun auf CD erhältlich.</p>
-
-        <div class="tontraeger-links">
-          <h3>Kostproben</h3>
-          <a href="/mp3/ZumBeginn.mp3" target="_blank" rel="noopener">Zum Beginn</a>
-          <a href="/mp3/Credo.mp3" target="_blank" rel="noopener">Credo</a>
+    {% for tontraeger in page.tontraeger %}
+      <div class="tontraeger-card">
+        <div class="tontraeger-image">
+          <img src="{{ tontraeger.bild }}" alt="{{ tontraeger.alt }}">
         </div>
 
-        <div class="tontraeger-links">
-            <a href="#" class="open-modal" data-modal="modal-messe">Inhaltsverzeichnis</a>
-            <a href="/bestellen.html">Bestellen</a>
+        <div class="tontraeger-content">
+          <h2>{{ tontraeger.titel }}</h2>
+
+          <p>{{ tontraeger.text }}</p>
+
+          {% if tontraeger.kostproben %}
+            <div class="tontraeger-links">
+              <h3>Kostproben</h3>
+
+              {% for kostprobe in tontraeger.kostproben %}
+                <a href="{{ kostprobe.url }}" target="_blank" rel="noopener">{{ kostprobe.text }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <div class="tontraeger-links">
+            {% if tontraeger.modal %}
+              <a href="#" class="open-modal" data-modal="{{ tontraeger.modal }}">Inhaltsverzeichnis</a>
+            {% endif %}
+
+            {% if tontraeger.bestellen %}
+              <a href="{{ tontraeger.bestellen }}">Bestellen</a>
+            {% endif %}
+          </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="tontraeger-card">
-      <div class="tontraeger-image">
-        <img src="/images/75_CD_Echo_vom_Mythen_klein.gif" alt="CD Schwyzer Vereine Cover">
-      </div>
-
-      <div class="tontraeger-content">
-        <h2>Naturjüüze</h2>
-
-        <p>Mit dieser selber produzierten CD und Musikkassette möchten wir Ihnen vor allem die Eigenarten unserer Naturjüüze dokumentieren.</p>
-        <!-- Naturjüüze -->
-        <div class="tontraeger-links">
-          <h3>Kostproben</h3>
-          <a href="/mp3/dr_GibelerInternet.mp3" target="_blank" rel="noopener">d’Gibeler</a>
-          <a href="/mp3//Die_alte_Schwyzer_Internet.mp3" target="_blank" rel="noopener">Die alte Schwyzer</a>
-        </div>
-        <div class="tontraeger-links">
-            <a href="#" class="open-modal" data-modal="modal-schwyzer-vereine">Inhaltsverzeichnis</a>
-            <a href="/bestellen.html">Bestellen</a>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="tontraeger-card">
-      <div class="tontraeger-image">
-        <img src="/images/CD_Schwyzer_Vereine.jpg" alt="75 Jahre Echo vom Mythen CD Cover">
-      </div>
-
-      <div class="tontraeger-content">
-        <h2>75 Jahre Echo vom Mythen</h2>
-
-        <p>Diese CD wurde im Rahmen des Kulturengagement der Schwyzer Kantonalbank produziert.</p>
-
-        <div class="tontraeger-links">
-          <h3>Kostproben</h3>
-          <a href="/mp3/E_Jodler_1Strophe_Internet.mp3" target="_blank" rel="noopener">E Jodler</a>
-        </div>
-        <div class="tontraeger-links">
-          <a href="#" class="open-modal" data-modal="modal-75-jahr">Inhaltsverzeichnis</a>
-          <a href="/bestellen.html">Bestellen</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="tontraeger-card">
-      <div class="tontraeger-image">
-        <img src="/images/Kassette.jpg" alt="Kassette Echo vom Mythen Cover">
-      </div>
-
-      <div class="tontraeger-content">
-        <h2>60 Jahre Jodlerklub Echo vom Mythen</h2>
-
-        <p>Diese Kassette und Langspielplatten wurde 1988 anlässlich des 60. jährigen Bestehens des Klubs aufgenommen.</p>
-
-        <div class="tontraeger-links">
-          <h3>Kostproben</h3>
-          <a href="/mp3/Die_alte_Schwyzer_Internet.mp3" target="_blank" rel="noopener">D'r alt Schwyzer</a>
-          <a href="/mp3/ZPaulis.mp3" target="_blank" rel="noopener">D's Paulis</a>
-        </div>
-        <div class="tontraeger-links">
-          <a href="#" class="open-modal" data-modal="modal-kassette">Inhaltsverzeichnis</a>
-          <a href="/bestellen.html">Bestellen</a>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
 
 
     <div class="vergriffene-tontraeger">
@@ -115,73 +156,27 @@ seo:
 
       <p>Zudem ist das „Echo“ auf folgenden Tonträgern zu hören, die aber leider alle vergriffen sind:</p>
 
-      <div class="vergriffen-card">
-        <h3>Schwyz</h3>
-        <p>Tell Records</p>
-        <p>Produziert 1977 mit folgenden Titeln</p>
+      {% for vergriffen in page.vergriffene_tontraeger %}
+        <div class="vergriffen-card">
+          <h3>{{ vergriffen.titel }}</h3>
+          <p>{{ vergriffen.label }}</p>
+          <p>{{ vergriffen.info }}</p>
 
-        <div class="titel-grid titel-grid-header">
-          <div>Titel</div>
-          <div>Komponist</div>
-          <div>Dirigent</div>
+          <div class="titel-grid titel-grid-header">
+            <div>Titel</div>
+            <div>Komponist</div>
+            <div>Dirigent</div>
+          </div>
+
+          {% for lied in vergriffen.titel_liste %}
+            <div class="titel-grid">
+              <div>{{ lied.titel }}</div>
+              <div>{{ lied.komponist }}</div>
+              <div>{{ lied.dirigent }}</div>
+            </div>
+          {% endfor %}
         </div>
-
-        <div class="titel-grid">
-          <div>Am Röbi sine</div>
-          <div>trad.</div>
-          <div>Albert Truttmann</div>
-        </div>
-
-        <div class="titel-grid">
-          <div>Fluehöfler</div>
-          <div>trad.</div>
-          <div>Albert Truttmann</div>
-        </div>
-      </div>
-
-
-      <div class="vergriffen-card">
-        <h3>Am Eidg. Jodlerfäscht z'Schwyz</h3>
-        <p>Helvetia / Phonag</p>
-        <p>Produziert 1978 mit folgenden Titeln</p>
-
-        <div class="titel-grid titel-grid-header">
-          <div>Titel</div>
-          <div>Komponist</div>
-          <div>Dirigent</div>
-        </div>
-
-        <div class="titel-grid">
-          <div>Dä Chaltbächler</div>
-          <div>trad.</div>
-          <div>Albert Truttmann</div>
-        </div>
-      </div>
-
-
-      <div class="vergriffen-card">
-        <h3>Volkstümliches Schwyz</h3>
-        <p>Tell Records</p>
-        <p>Produziert 1983 mit folgenden Titeln</p>
-
-        <div class="titel-grid titel-grid-header">
-          <div>Titel</div>
-          <div>Komponist</div>
-          <div>Dirigent</div>
-        </div>
-
-        <div class="titel-grid">
-          <div>Schwyzer-Jutz</div>
-          <div>trad.</div>
-          <div>Albert Truttmann</div>
-        </div>
-
-        <div class="titel-grid">
-          <div>Nägälibärgler</div>
-          <div>trad.</div>
-          <div>Albert Truttmann</div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
 
@@ -192,40 +187,15 @@ seo:
   </div>
 
 
-  <!-- Popup Inhaltsverzeichnis: Schwyzer Naturjuuz-Mäss -->
-  <div class="modal" id="modal-messe">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Schliessen">&times;</button>
-      <img src="/images/InhaltMesse.jpg" alt="Inhaltsverzeichnis Schwyzer Naturjuuz-Mäss">
+  {% for modal in page.modals %}
+    <!-- {{ modal.kommentar }} -->
+    <div class="modal" id="{{ modal.id }}">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Schliessen">&times;</button>
+        <img src="{{ modal.bild }}" alt="{{ modal.alt }}">
+      </div>
     </div>
-  </div>
-
-
-  <!-- Popup Inhaltsverzeichnis: CD Schwyzer Vereine -->
-  <div class="modal" id="modal-schwyzer-vereine">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Schliessen">&times;</button>
-      <img src="/images/CD_Schwyzer_Vereine_Inhalt.jpg" alt="Inhaltsverzeichnis CD Schwyzer Vereine">
-    </div>
-  </div>
-
-
-  <!-- Popup Inhaltsverzeichnis: 75 Jahr CD -->
-  <div class="modal" id="modal-75-jahr">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Schliessen">&times;</button>
-      <img src="/images/CD-Inhalt_75_Jahr.gif" alt="Inhaltsverzeichnis 75 Jahre Echo vom Mythen">
-    </div>
-  </div>
-
-
-  <!-- Popup Inhaltsverzeichnis: Kassette -->
-  <div class="modal" id="modal-kassette">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Schliessen">&times;</button>
-      <img src="/images/Inhalt_kassette.jpg" alt="Inhaltsverzeichnis Kassette">
-    </div>
-  </div>
+  {% endfor %}
 
 </section>
 
@@ -269,7 +239,7 @@ seo:
 
 
 <style>
-    .tontraeger-wrapper {
+.tontraeger-wrapper {
   max-width: 1000px;
   margin: 0 auto;
 }
