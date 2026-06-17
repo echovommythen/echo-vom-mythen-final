@@ -4,226 +4,155 @@ title: Fotogalerie
 seo:
   title: Fotogalerie | Jodlerklub Echo vom Mythen Schwyz
   description: Bilder und Eindrücke aus dem Vereinsleben des Jodlerklubs Echo vom Mythen Schwyz – von Auftritten, Jodlerabenden, Ausflügen und besonderen Momenten.
-  social_image: /images/aktuelles/ehr2025klein.jpg
+  social_image: /images/echo-vom-mythen-banner-bild.JPG
   twitter_card: summary_large_image
   keywords: Fotogalerie, Bilder, Jodlerklub Echo vom Mythen, Schwyz, Jodlerabend, Auftritte, Vereinsleben, Naturjuuz
   hide-from-google: false
+
+bilder:
+  - bild: /images/echo-vom-mythen-banner-bild.JPG
+    alt: Jodlerklub Echo vom Mythen Schwyz
+
+  - bild: /images/echo-vom-mythen-naturjodel-2.JPG
+    alt: Jodlerklub Echo vom Mythen Naturjodel
+
+stimmen:
+  - titel: Dirigent
+    mitglieder:
+      - name: vakant
+        bild: "#"
+        alt: Dirigent
+
+  - titel: Erste und zweite Juzer
+    mitglieder:
+      - name: Urs Büeler
+        bild: /images/mitglieder/DSC_1835.JPG
+        alt: Erste und zweite Juzer
+
+      - name: Paul Schuler
+        bild: /images/mitglieder/DSC_1850.JPG
+        alt: Erste und zweite Juzer
+
+      - name: Edwin Pfyl
+        bild: /images/mitglieder/DSC_1877.JPG
+        alt: Erste und zweite Juzer
+
+      - name: Alois Heinzer
+        bild: /images/mitglieder/DSC_1825.JPG
+        alt: Erste und zweite Juzer
+
+      - name: Peter Wallimann
+        bild: /images/mitglieder/DSC_1842.JPG
+        alt: Erste und zweite Juzer
+
+  - titel: Erster Tenor
+    mitglieder:
+      - name: Röbi Horat
+        bild: /images/mitglieder/DSC_1852.JPG
+        alt: Erster Tenor
+
+      - name: Bruno Betschart
+        bild: /images/mitglieder/DSC_1858.JPG
+        alt: Erster Tenor
+
+      - name: Felix Betschart
+        bild: /images/mitglieder/DSC_1832.JPG
+        alt: Erster Tenor
+
+  - titel: Zweiter Tenor
+    mitglieder:
+      - name: Maurice Andrey
+        bild: /images/mitglieder/DSC_1854.JPG
+        alt: Zweiter Tenor
+
+      - name: Iwan Kälin
+        bild: /images/mitglieder/DSC_1839.JPG
+        alt: Zweiter Tenor
+
+      - name: Roland Nideröst
+        bild: /images/mitglieder/roland.jpg
+        alt: Zweiter Tenor
+
+      - name: Gerold Suter
+        bild: /images/mitglieder/DSC_1829.JPG
+        alt: Zweiter Tenor
+
+  - titel: Erster Bass
+    mitglieder:
+      - name: Thomas Büeler
+        bild: /images/mitglieder/DSC_1827.JPG
+        alt: Erster Bass
+
+      - name: Markus Kälin
+        bild: /images/mitglieder/DSC_1860.JPG
+        alt: Erster Bass
+
+      - name: Tomas Riesen
+        bild: /images/mitglieder/DSC_1874.JPG
+        alt: Erster Bass
+
+      - name: Roger Betschart
+        bild: /images/mitglieder/DSC_1865.JPG
+        alt: Erster Bass
+
+  - titel: Zweiter Bass
+    mitglieder:
+      - name: Friedrich Kälin
+        bild: /images/mitglieder/DSC_1844.JPG
+        alt: Zweiter Bass
+
+      - name: Richard Schmid
+        bild: /images/mitglieder/DSC_1837.JPG
+        alt: Zweiter Bass
+
+      - name: David Schmid
+        bild: /images/mitglieder/david.jpg
+        alt: Zweiter Bass
+
+      - name: Christian Wiget
+        bild: /images/mitglieder/DSC_1855.JPG
+        alt: Zweiter Bass
+
+      - name: Urs Gwerder
+        bild: /images/mitglieder/DSC_1868.JPG
+        alt: Zweiter Bass
 ---
 
 <section class="capped-width padded" id="top">
   <div class="center padded-b-2 margin-b-2 xs-margin-t-35">
     <h1>Fotos</h1>
     <br><br>
-    <img src="/images/echo-vom-mythen-banner-bild.JPG" class="img-style-1 margin-b-2">
-    <img src="/images/echo-vom-mythen-naturjodel-2.JPG" class="img-style-1">
+
+    {% for bild in page.bilder %}
+      <img src="{{ bild.bild }}" alt="{{ bild.alt }}" class="img-style-1 {% if forloop.first %}margin-b-2{% endif %}">
+    {% endfor %}
   </div>
 
   <div class="kleinzeln-wrapper">
 
-    <div class="stimmen-block center">
-      <h2>Dirigent</h2>
+    {% for stimme in page.stimmen %}
+      <div class="stimmen-block center">
+        <h2>{{ stimme.titel }}</h2>
 
-      <div class="grid-center">
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="#" alt="Dirigent">
-            <p>vakant</p>
-          </div>
+        <div class="grid-center">
+          {% for mitglied in stimme.mitglieder %}
+            <div class="col-3_sm-6_xs-12 padded-05">
+              <div class="mitglied-card">
+                <img src="{{ mitglied.bild }}" alt="{{ mitglied.alt }}">
+                <p>{{ mitglied.name }}</p>
+              </div>
+            </div>
+          {% endfor %}
         </div>
       </div>
-    </div>
-
-
-    <div class="stimmen-block center">
-      <h2>Erste und zweite Juzer</h2>
-
-      <div class="grid-center">
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1835.JPG" alt="Erste und zweite Juzer">
-            <p>Urs Büeler</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1850.JPG" alt="Erste und zweite Juzer">
-            <p>Paul Schuler</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1877.JPG" alt="Erste und zweite Juzer">
-            <p>Edwin Pfyl</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1825.JPG" alt="Erste und zweite Juzer">
-            <p>Alois Heinzer</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1842.JPG" alt="Erste und zweite Juzer">
-            <p>Peter Wallimann</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="stimmen-block center">
-      <h2>Erster Tenor</h2>
-
-      <div class="grid-center">
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1852.JPG" alt="Erster Tenor">
-            <p>Röbi Horat</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1858.JPG" alt="Erster Tenor">
-            <p>Bruno Betschart</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1832.JPG" alt="Erster Tenor">
-            <p>Felix Betschart</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="stimmen-block center">
-      <h2>Zweiter Tenor</h2>
-
-      <div class="grid-center">
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1854.JPG" alt="Zweiter Tenor">
-            <p>Maurice Andrey</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1839.JPG" alt="Zweiter Tenor">
-            <p>Iwan Kälin</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/roland.jpg" alt="Zweiter Tenor">
-            <p>Roland Nideröst</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1829.JPG" alt="Zweiter Tenor">
-            <p>Gerold Suter</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="stimmen-block center">
-      <h2>Erster Bass</h2>
-
-      <div class="grid-center">
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1827.JPG" alt="Erster Bass">
-            <p>Thomas Büeler</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1860.JPG" alt="Erster Bass">
-            <p>Markus Kälin</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1874.JPG" alt="Erster Bass">
-            <p>Tomas Riesen</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1865.JPG" alt="Erster Bass">
-            <p>Roger Betschart</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="stimmen-block center">
-      <h2>Zweiter Bass</h2>
-
-      <div class="grid-center">
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1844.JPG" alt="Zweiter Bass">
-            <p>Friedrich Kälin</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1837.JPG" alt="Zweiter Bass">
-            <p>Richard Schmid</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/david.jpg" alt="Zweiter Bass">
-            <p>David Schmid</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1855.JPG" alt="Zweiter Bass">
-            <p>Christian Wiget</p>
-          </div>
-        </div>
-
-        <div class="col-3_sm-6_xs-12 padded-05">
-          <div class="mitglied-card">
-            <img src="/images/mitglieder/DSC_1868.JPG" alt="Zweiter Bass">
-            <p>Urs Gwerder</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
 
   </div>
 </section>
 
 
-
 <style>
-   .kleinzeln-wrapper {
+.kleinzeln-wrapper {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -278,5 +207,5 @@ seo:
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
-} 
+}
 </style>
