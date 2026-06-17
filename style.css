@@ -28,7 +28,7 @@ html {
 /* ---------- Negative Space Utility Classes  ------------------ */ 
 
 .capped-width-wide      { max-width: 1600px; margin: auto; }
-.capped-width           { max-width: 1200px; margin: auto; }
+.capped-width           { max-width: 1400px; margin: auto; }
 .capped-width-narrow    { max-width: 1000px; margin: auto; }
 .capped-width-v-narrow  { max-width: 800px;  margin: auto; }
 
@@ -145,6 +145,7 @@ html {
   background-color: rgba(0,0,0,0.5);
 }
 
+ul { list-style: inside;}
 
 .bg-overlay > * {
   z-index: 2;
@@ -616,9 +617,9 @@ footer nav a {
 
 .burger-button {
   position:fixed;
-  top: 2vh;
-  right: 4vh;
-  z-index: 9;
+  top: 0;
+  right: 2rem;
+  z-index: 56;
   padding: 8px;
   margin-top: 0.8rem;
   line-height: 1.7;
@@ -641,7 +642,7 @@ footer nav a {
 
 .burger-button-index span{
   width: 35px;
-  border: 2px solid var(--medium);
+  border: 1px solid white;
   background-color: white;
   display: block;
   transition: 0.5s;
@@ -655,7 +656,7 @@ footer nav a {
 
 .burger-button span{
   width: 35px;
-  border: 2px solid var(--medium);
+  border: 1px solid white;
   background-color: white;
   display: block;
   transition: 0.5s;
@@ -730,10 +731,10 @@ footer nav a {
 }
 
 .mobile-menu {
-  background-color: var(--featured);
+  background-color: var(--dark);
   padding: 0 5% 5% 5%;
   position: fixed; 
-  z-index: 1;
+  z-index: 55;
   top: 0;
   right: -100%;
   left: 100vw;
@@ -747,7 +748,7 @@ footer nav a {
 
 .mobile-menu.active {
   right: 0;
-  left: 20vw;
+  left: 0;
 }
 
 .logo-mobile-menu {
@@ -759,11 +760,10 @@ footer nav a {
 }
 
 .mobile-menu a {
-  font-family: 'Poiret One', sans-serif;
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0 0.5rem 0.5rem 0;
   font-size: 1.3rem;
-  color: var(--dark-text)
+  color: white;
 } 
 
 .mobile-nav {
@@ -852,7 +852,20 @@ button:hover {
 /* ------------ Blogging elements  ----------------------- */
 
 
+.mobile-logo img {
+  width: 8rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
+.nav-small-mobile a {
+ font-weight: 400;
+ font-size: 1rem;
+}
+
+.nav-small-mobile {
+  margin-top: 2rem;
+}
 
 
 /* Miscelaneous elements  */
@@ -902,6 +915,11 @@ hr.short.center {
 	.show-md { display: block; }
 	.hide-md { display: none;  }
 
+
+  .header-logo img {
+      top: -1rem;
+    }
+
 }
 
 /* ------- SM Media Query (48em / 768px) --------------- */ 
@@ -909,6 +927,11 @@ hr.short.center {
 
 
 @media(max-width:48em) {
+
+  .header-logo img {
+  max-width: 9rem;
+
+}
 
 	.show-sm { display: block; }
 	.hide-sm { display: none;  }
@@ -931,6 +954,9 @@ hr.short.center {
   .sm-portrait      { padding-bottom: 125%; }
   .sm-square        { padding-bottom: 100%; }
 
+
+
+
 }
 
 /* ------- XS Media Query (36em / 576px) --------------- */ 
@@ -945,4 +971,48 @@ hr.short.center {
       font-weight: 300;
       font-family: 'Martel', serif; 
     }
+.header-logo img {
+  max-width: 7rem;
+
+}
+
+.button-absolute-index {
+  position: absolute;
+  bottom: -0.3rem;
+  left: 10%;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.xs-tall-40 {
+  min-height: 35vh;
+}
+
+
+.button {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h1 { font-size: 2rem;}
+
+.veranstaltung-datum {
+  font-size: 1.2rem;
+}
+
+.xs-padded-t-0 { padding-top: 0;}
+.xs-padded-b-0 { padding-bottom: 0;}
+
+.xs-margin-t-35 { margin-top: 3.5rem;}
+.xs-margin-b-0 { margin-bottom: 0;}
+
+.footer-logo {
+  width: 7rem;
+}
+
+.xs-center { text-align: center;}
+
 }
