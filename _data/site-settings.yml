@@ -1,11 +1,12 @@
 seo:
-  site_name: Example
-  title: Example SEO Title
-  description:
-  keywords:
-  social_image:
-  author:
-  favicon_image:
+  site_name: Jodlerklub Echo vom Mythen Schwyz
+  title: Jodlerklub Echo vom Mythen Schwyz | Traditioneller Schwyzer Naturjuuz
+  description: Der Jodlerklub Echo vom Mythen Schwyz pflegt seit 1928 den traditionellen Schwyzer Naturjuuz und tritt an Konzerten, Jodlerabenden, Gottesdiensten und Vereinsanlässen auf.
+  keywords: Jodlerklub Echo vom Mythen, Echo vom Mythen, Schwyz, Jodlerklub Schwyz, Naturjuuz, Naturjodel, Schwyzer Naturjuuz, Jodeln, Jodlerabend, Schweizer Tradition, Volksmusik
+  social_image: /images/echo-vom-mythen-banner-bild.JPG
+  author: Jodlerklub Echo vom Mythen Schwyz
+  favicon_image: /images/favicon.png
+
 social:
   instagram_url: https://www.instagram.com/echovommythen/
   facebook_url:
