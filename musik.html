@@ -3,17 +3,21 @@ layout: default
 title: Musik
 seo:
   title: Musik & Tondokumente | Jodlerklub Echo vom Mythen Schwyz
-  description: CDs, Kassetten, Langspielplatten und Kostproben des Jodlerklubs Echo vom Mythen Schwyz mit Schwyzer Naturjuuz, Naturjuuz-Mäss und weiteren Tondokumenten.
+  description: CDs, Kassetten, Langspielplatten und Kostproben des Jodlerklubs
+    Echo vom Mythen Schwyz mit Schwyzer Naturjuuz, Naturjuuz-Mäss und weiteren
+    Tondokumenten.
   social_image: /images/Schwyernaturjuuzmesse.jpg
   twitter_card: summary_large_image
-  keywords: Jodlerklub Echo vom Mythen, Musik, Tondokumente, CD, Kassette, LP, Naturjuuz, Schwyzer Naturjuuz-Mäss, Schwyz
+  keywords: Jodlerklub Echo vom Mythen, Musik, Tondokumente, CD, Kassette, LP,
+    Naturjuuz, Schwyzer Naturjuuz-Mäss, Schwyz
   hide-from-google: false
-
 tontraeger:
   - titel: Schwyzer Naturjuuz-Mäss
     bild: /images/Schwyernaturjuuzmesse.jpg
     alt: Schwyzer Naturjuuz-Mäss CD Cover
-    text: 'Bei den Vorbereitungen zur Uraufführung der Schwyzer Naturjuuz-Mäss wurde eine Probeaufnahme der ganzen Messe durchgeführt. Sie ist nun auf CD erhältlich.'
+    text: Bei den Vorbereitungen zur Uraufführung der Schwyzer Naturjuuz-Mäss wurde
+      eine Probeaufnahme der ganzen Messe durchgeführt. Sie ist nun auf CD
+      erhältlich.
     kostproben:
       - text: Zum Beginn
         url: /mp3/ZumBeginn.mp3
@@ -21,11 +25,11 @@ tontraeger:
         url: /mp3/Credo.mp3
     modal: modal-messe
     bestellen: /bestellen.html
-
   - titel: Naturjüüze
     bild: /images/75_CD_Echo_vom_Mythen_klein.gif
     alt: CD Schwyzer Vereine Cover
-    text: 'Mit dieser selber produzierten CD und Musikkassette möchten wir Ihnen vor allem die Eigenarten unserer Naturjüüze dokumentieren.'
+    text: Mit dieser selber produzierten CD und Musikkassette möchten wir Ihnen vor
+      allem die Eigenarten unserer Naturjüüze dokumentieren.
     kostproben:
       - text: d’Gibeler
         url: /mp3/dr_GibelerInternet.mp3
@@ -33,50 +37,45 @@ tontraeger:
         url: /mp3/Die_alte_Schwyzer_Internet.mp3
     modal: modal-75-jahr
     bestellen: /bestellen.html
-
   - titel: 75 Jahre Echo vom Mythen
     bild: /images/CD_Schwyzer_Vereine.jpg
     alt: 75 Jahre Echo vom Mythen CD Cover
-    text: 'Diese CD wurde im Rahmen des Kulturengagement der Schwyzer Kantonalbank produziert.'
+    text: Diese CD wurde im Rahmen des Kulturengagement der Schwyzer Kantonalbank
+      produziert.
     kostproben:
       - text: E Jodler
         url: /mp3/E_Jodler_1Strophe_Internet.mp3
     modal: modal-schwyzer-vereine
     bestellen: /bestellen.html
-
   - titel: 60 Jahre Jodlerklub Echo vom Mythen
     bild: /images/Kassette.jpg
     alt: Kassette Echo vom Mythen Cover
-    text: 'Diese Kassette und Langspielplatten wurde 1988 anlässlich des 60. jährigen Bestehens des Klubs aufgenommen.'
+    text: Diese Kassette und Langspielplatten wurde 1988 anlässlich des 60. jährigen
+      Bestehens des Klubs aufgenommen.
     kostproben:
-      - text: "D'r alt Schwyzer"
+      - text: D'r alt Schwyzer
         url: /mp3/Dr_alt_Schwyzer.mp3
-      - text: "D's Paulis"
+      - text: D's Paulis
         url: /mp3/ZPaulis.mp3
     modal: modal-kassette
     bestellen: /bestellen.html
-
 modals:
   - id: modal-messe
     kommentar: Popup Inhaltsverzeichnis Schwyzer Naturjuuz-Mäss
     bild: /images/InhaltMesse.jpg
     alt: Inhaltsverzeichnis Schwyzer Naturjuuz-Mäss
-
   - id: modal-schwyzer-vereine
     kommentar: Popup Inhaltsverzeichnis CD Schwyzer Vereine
     bild: /images/CD_Schwyzer_Vereine_Inhalt.jpg
     alt: Inhaltsverzeichnis CD Schwyzer Vereine
-
   - id: modal-75-jahr
     kommentar: Popup Inhaltsverzeichnis 75 Jahr CD
     bild: /images/CD-Inhalt_75_Jahr.gif
     alt: Inhaltsverzeichnis 75 Jahre Echo vom Mythen
-
   - id: modal-kassette
     kommentar: Popup Inhaltsverzeichnis Kassette
     bild: /images/Inhalt_kassette.jpg
     alt: Inhaltsverzeichnis Kassette
-
 vergriffene_tontraeger:
   - titel: Schwyz
     label: Tell Records
@@ -88,7 +87,6 @@ vergriffene_tontraeger:
       - titel: Fluehöfler
         komponist: trad.
         dirigent: Albert Truttmann
-
   - titel: Am Eidg. Jodlerfäscht z'Schwyz
     label: Helvetia / Phonag
     info: Produziert 1978 mit folgenden Titeln
@@ -96,7 +94,6 @@ vergriffene_tontraeger:
       - titel: Dä Chaltbächler
         komponist: trad.
         dirigent: Albert Truttmann
-
   - titel: Volkstümliches Schwyz
     label: Tell Records
     info: Produziert 1983 mit folgenden Titeln
@@ -108,7 +105,6 @@ vergriffene_tontraeger:
         komponist: trad.
         dirigent: Albert Truttmann
 ---
-
 <section class="capped-width padded" id="top">
   <div class="center padded-b-2 margin-b-2 xs-margin-t-35 xs-margin-b-0">
     <h1>Musik</h1>
@@ -119,7 +115,7 @@ vergriffene_tontraeger:
     {% for tontraeger in page.tontraeger %}
       <div class="tontraeger-card">
         <div class="tontraeger-image">
-          <img src="{{ tontraeger.bild }}" alt="{{ tontraeger.alt }}">
+          <img src="{{ tontraeger.bild }}" alt="{{ tontraeger.alt }}" />
         </div>
 
         <div class="tontraeger-content">
@@ -192,7 +188,7 @@ vergriffene_tontraeger:
     <div class="modal" id="{{ modal.id }}">
       <div class="modal-content">
         <button class="modal-close" aria-label="Schliessen">&times;</button>
-        <img src="{{ modal.bild }}" alt="{{ modal.alt }}">
+        <img src="{{ modal.bild }}" alt="{{ modal.alt }}" />
       </div>
     </div>
   {% endfor %}
