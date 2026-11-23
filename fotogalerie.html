@@ -108,7 +108,7 @@ stimmen:
     <br /><br />
 
     {% for bild in page.bilder %}
-      <img src="{{ bild.bild }}" alt="{{ bild.alt }}" class="img-style-1 {% if forloop.first %}margin-b-2{% endif %}" />
+      <img data-src="{{ bild.bild }}" alt="{{ bild.alt }}" class="lazy img-style-1 {% if forloop.first %}margin-b-2{% endif %}" />
     {% endfor %}
   </div>
 
@@ -122,7 +122,7 @@ stimmen:
           {% for mitglied in stimme.mitglieder %}
             <div class="col-3_sm-6_xs-12 padded-05">
               <div class="mitglied-card">
-                <img src="{{ mitglied.bild }}" alt="{{ mitglied.alt }}" />
+                <img data-src="{{ mitglied.bild }}" alt="{{ mitglied.alt }}" class="lazy" />
                 <p>{{ mitglied.name }}</p>
               </div>
             </div>
